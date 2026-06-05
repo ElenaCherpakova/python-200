@@ -12,8 +12,9 @@ This first week will be about getting situated. By the end of it, you will under
 1. [Cloud overview](https://github.com/Code-the-Dream-School/python-200/blob/main/lessons/08_cloud_intro/01_cloud_overview.md)
 A platform-agnostic introduction to cloud computing: what it is, why it matters, and what changes when you move from running code on your laptop to running it in the cloud. We cover the core concepts you will encounter regardless of which cloud provider you use.
 
-2. [A Practical Introduction to Azure](https://github.com/Code-the-Dream-School/python-200/blob/main/lessons/08_cloud_intro/02_azure_intro.md)
-A hands-on introduction to Azure. We will make sure you can log in, navigate the Portal, and get set up with your the sandbox you will use for the rest of the course.
+2. [The Cloud Provider Landscape](https://github.com/Code-the-Dream-School/python-200/blob/main/lessons/08_cloud_intro/02_cloud_landscape.md)
+An overview of the "Big Three" cloud platforms, developer platforms, and why we chose Supabase for this course.
+
 
 ## Week 8 Assignments
 Once you finish the lessons, head on over to the [assignments](../../assignments/README.md) to get more hands-on practice with the material. The assignment is fairly light this week compared to previous weeks. Enjoy it while it lasts. :smile: 
