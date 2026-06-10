@@ -17,4 +17,4 @@ Introduces four patterns that distinguish a working pipeline from a reliable one
 
 ## Week 11 Assignment
 
-Once you finish the lessons, head on over to the [assignments](../../assignments/README.md) for the capstone project.
+Once you finish the lessons, scroll down to the Coding Assignment instructions below for details on the capstone project.
