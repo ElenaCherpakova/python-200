@@ -216,8 +216,9 @@ Add a comment: given that grades are on a 0-20 scale, what do the slopes and RMS
 Now build a regression model using all of the numeric and binary features from the Feature Guide:
 
 ```python
-feature_cols = ["failures", "Medu", "Fedu", "studytime", "higher", "schoolsup",
-                "internet", "sex", "freetime", "activities", "traveltime"]
+feature_cols = ["age", "Medu", "Fedu", "traveltime", "studytime", "failures",
+                "absences", "freetime", "goout", "Walc", "schoolsup",
+                "internet", "higher", "activities", "sex"]
 X = df_clean[feature_cols].values
 y = df_clean["G3"].values
 ```
@@ -253,5 +254,51 @@ Then write a plain-language summary in your comments statements covering:
 Add `G1` (first period grade) as a feature to the full model from Task 5 and refit. We kept it out because it is so powerful. Print the new test R². The jump will be large -- from roughly 0.30 to somewhere around 0.80.
 
 Add a comment addressing these questions: does a high R² here mean G1 is *causing* G3? Is this a useful model for identifying students who might struggle? What might educators need to do if they wanted to intervene early, before G1 is even available?
+
+## After You're Done: Three Things Worth Understanding
+
+If you built the full model correctly, a few results probably looked strange.
+None of them are mistakes -- they're some of the most important ideas in
+regression, and they're worth understanding before you move on. Try to answer
+each question yourself before expanding the explanation.
+
+<details>
+<summary><strong>Why did <code>absences</code> almost disappear?</strong></summary>
+
+In Task 2 you established that `absences` is one of the strongest *individual*
+correlates of G3. Yet in the full model its coefficient is nearly zero. Both
+things are true at once.
+
+The question to sit with: if you already know a student's `failures`, `goout`,
+and `Walc`, how much *extra* does `absences` tell you? A coefficient answers
+"what does this feature add, holding the others fixed?" -- not "is this feature
+related to the grade?" When features carry overlapping information, the shared
+signal gets distributed among them, and a strong raw correlate can flatten out.
+
+This is the single most common way people misread a regression: treating a
+small coefficient as "this doesn't matter." It can instead mean "something else
+already said it."
+</details>
+
+<details>
+<summary><strong>Why did <code>higher</code> and <code>failures</code> change when you added features?</strong></summary>
+
+Compare the coefficients here to your baseline model. `failures` shrank;
+`higher` moved a lot. The features didn't change -- the *question each
+coefficient answers* changed. In a one-feature model, `failures` absorbs the
+influence of everything correlated with it. Add those other features and each
+coefficient narrows to its own unique contribution. Coefficients are always
+relative to the company they keep.
+</details>
+
+<details>
+<summary><strong>What are <code>goout</code> and <code>Walc</code> telling you?</strong></summary>
+
+These behavioral features carry real, negative relationships with G3 that
+survive into the full model. Before you explain them, ask: is this a causal
+story, or could both the behavior and the grade share a common upstream cause?
+Your data can't settle that -- but noticing the ambiguity is exactly the
+judgment a real analyst is paid for.
+</details>
 
 Good luck on this mini-regression analysis project!
