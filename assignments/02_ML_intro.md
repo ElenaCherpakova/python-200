@@ -123,7 +123,7 @@ Add a comment interpreting the `smoker` coefficient: what does it represent in p
 
 A *predicted vs actual plot* is a standard tool for evaluating regression models. Each test observation becomes a dot: the model's prediction goes on the x-axis, the true value goes on the y-axis. A perfect model would place every point on the diagonal line where predicted equals actual.
 
-Using the two-feature model from Linear Regression Question 4, create this plot for the test set. Add a diagonal reference line, a title `"Predicted vs Actual"`, labeled axes, and save to `outputs/predicted_vs_actual.png`.
+Using the two-feature model from Linear Regression Question 4, create this plot for the test set. Add a diagonal reference line, a title `"Predicted vs Actual"`, labeled axes, and save to `outputs/predicted_vs_actual_cost.png`.
 
 Add a comment: what does it mean when a point falls above the diagonal? What about below?
 
@@ -240,7 +240,7 @@ Finally, add a comment answering: if you were deploying this model in production
 
 A useful way to evaluate a regression model visually is a *predicted vs actual plot*. This is a scatter plot where each point in the test set becomes a dot, with the model's *prediction* (y_hat) on the x-axis and the true value (y) on the y-axis. If the model were perfect, every point would fall exactly on the diagonal (predicted = actual). Clusters or curves away from the diagonal reveal systematic errors that RMSE alone won't show you. Random scattering around the diagonal is expected, and acceptable, prediction error. 
 
-Create this plot for your test set. Add a diagonal reference line (for y=y_predicted), a title `"Predicted vs Actual (Full Model)"`, labeled axes, and save to `outputs/predicted_vs_actual.png`. Add a comment: does the model seem to struggle more at the high end, the low end, or is error roughly uniform across grade levels? What does a value above or below the diagonal mean?
+Create this plot for your test set. Add a diagonal reference line (for y=y_predicted), a title `"Predicted vs Actual (Full Model)"`, labeled axes, and save to `outputs/predicted_vs_actual_g3.png`. Add a comment: does the model seem to struggle more at the high end, the low end, or is error roughly uniform across grade levels? What does a value above or below the diagonal mean?
 
 Then write a plain-language summary in your comments statements covering:
 
