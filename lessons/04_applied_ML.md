@@ -12,15 +12,15 @@ The running example throughout the week is a weather classifier: a model that ta
 
 ## Topics
 
-1. [ROC Curves and AUC](./01_roc_auc.md)
+1. [ROC Curves and AUC](https://github.com/Code-the-Dream-School/python-200-v1/blob/6d03052b8c84b2fa740c7e075952fbe22ee98d3c/lessons/04_applied_ML/01_roc_auc.md)
 Beyond accuracy: understanding the threshold problem, visualizing classifier performance with ROC curves, and using AUC to compare models without committing to a single cutoff.
 
-2. [Hyperparameter Tuning with GridSearchCV](./02_gridsearch.md)
+2. [Hyperparameter Tuning with GridSearchCV](https://github.com/Code-the-Dream-School/python-200-v1/blob/6d03052b8c84b2fa740c7e075952fbe22ee98d3c/lessons/04_applied_ML/02_gridsearch.md)
 Systematic hyperparameter search using cross-validated grid search. Covers `GridSearchCV`, `param_grid`, `best_params_`, and how to combine a Pipeline with a grid search for a clean, reproducible tuning workflow.
 
-3. [Model Persistence with joblib](./03_model_persistence.md)
+3. [Model Persistence with joblib](https://github.com/Code-the-Dream-School/python-200-v1/blob/6d03052b8c84b2fa740c7e075952fbe22ee98d3c/lessons/04_applied_ML/03_model_persistence.md)
 Saving a trained model to disk with `joblib.dump` and loading it in a separate script with `joblib.load`. Covers why you should serialize the full sklearn Pipeline rather than the model alone, and what to document to keep a saved model usable over time.
 
 ## Week 4 Assignments
 
-Once you finish the lessons, head to the [assignments](../../assignments/README.md) to practice these skills and build the weather classifier you will reuse later in the course.
+Once you finish the lessons, scroll down to review assignment instructions in order to practice these skills and build the weather classifier you will reuse later in the course.
