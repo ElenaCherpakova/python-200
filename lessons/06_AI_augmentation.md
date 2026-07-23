@@ -4,11 +4,11 @@ Welcome to Week 6 of Python 200! Last week we learned to interact with LLMs thro
 
 ## Topics
 
-1. [Intro to LLM Knowledge Augmentation](./01_llm_augmentation_intro.md)
+1. [Intro to LLM Knowledge Augmentation](https://github.com/Code-the-Dream-School/python-200-v1/blob/836e80bcd6458aedbcbaa4d53758fc7820e68e03/lessons/06_AI_augmentation/01_llm_augmentation_intro.md)
 An overview of the three main strategies for augmenting an LLM's knowledge: context injection (adding information directly to the prompt), fine-tuning (retraining the model on new data), and retrieval-augmented generation (RAG, giving the model access to an external data store at query time). We discuss the trade-offs of each before diving into RAG for the rest of the week.
 
-2. [Keyword-based RAG](./02_keyword_rag.md)
+2. [Keyword-based RAG](https://github.com/Code-the-Dream-School/python-200-v1/blob/836e80bcd6458aedbcbaa4d53758fc7820e68e03/lessons/06_AI_augmentation/02_keyword_rag.md)
 A from-scratch RAG pipeline that gives an LLM access to a folder of PDFs using keyword search. The goal is to make the core RAG loop — retrieve relevant documents, inject them into the prompt, generate an answer — concrete before we bring in a framework.
 
-3. [LlamaIndex](./03_llamaindex.md)
+3. [LlamaIndex](https://github.com/Code-the-Dream-School/python-200-v1/blob/836e80bcd6458aedbcbaa4d53758fc7820e68e03/lessons/06_AI_augmentation/03_llamaindex.md)
 A production-ready framework for building RAG pipelines. The lesson opens with a "What LlamaIndex Automates" section that covers the concepts keyword RAG left implicit: chunking, vector embeddings, cosine similarity, and indexing. With that grounding in place, we implement a complete semantic RAG pipeline and evaluate it using LlamaIndex's built-in FaithfulnessEvaluator and RelevancyEvaluator. An optional extension covers swapping to a persistent PostgreSQL + pgvector backend.
